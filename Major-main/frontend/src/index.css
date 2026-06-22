@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #0f172a;
+    --color-navy-light: #1e293b;
+    --color-accent: #6366f1;
+    --color-accent-light: #818cf8;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+  }
+
+  * {
+    @apply border-slate-200;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-slate-200/80;
+  }
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm;
+  }
+  .badge-pass {
+    @apply bg-emerald-50 text-emerald-800 border border-emerald-200;
+  }
+  .badge-fail {
+    @apply bg-red-50 text-red-800 border border-red-200;
+  }
+  .badge-warn {
+    @apply bg-amber-50 text-amber-900 border border-amber-200;
+  }
+  .badge-move {
+    @apply bg-indigo-50 text-indigo-800 border border-indigo-200;
+  }
+  .badge-stay {
+    @apply bg-slate-100 text-slate-700 border border-slate-200;
+  }
+  .badge-investigate {
+    @apply bg-yellow-50 text-yellow-900 border border-yellow-200;
+  }
+}
